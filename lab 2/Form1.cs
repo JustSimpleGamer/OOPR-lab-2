@@ -128,8 +128,8 @@ namespace lab_2
         }
         //Administrator
         public List<string> ClientsFoldersPaths;
-        //public List<ClientVm> Clients; //10. Масив об'єктів класу (вказівників?)
-        //public List<ClientManagerVm> AdmnistratorClientsManager; //10. Масив об'єктів класу (вказівників?)
+        //public List<ClientVm> Clients; //10. An array of class object pointers
+        //public List<ClientManagerVm> AdmnistratorClientsManager; //10. An array of class object pointers
         public AdministratorVm Administrator;
         private void Tab_Administrator_Button_NextRequest_Click(object sender, EventArgs e)
         {

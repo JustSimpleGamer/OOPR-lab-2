@@ -3,19 +3,19 @@ using System.Windows.Forms;
 
 namespace lab_2.Models
 {
-    public class AdministratorVm //1. Реалізація класу
+    public class AdministratorVm //1. Class implementation
     {
-        public LinkedList<ClientManagerVm> ClientsManagers { get; set; } //3. реалізація поля даних за допомогою властивостей { get; set; }
-        static public LinkedListNode<ClientManagerVm> Nodes { get; set; } //12. статийчний вказівник (ітератор) зв’язного списку об’єктів
-        public AdministratorVm() //4. конструктор без параметрів
+        public LinkedList<ClientManagerVm> ClientsManagers { get; set; } //3. Implementing a data field using properties { get; set; }
+        static public LinkedListNode<ClientManagerVm> Nodes { get; set; } //12. A static pointer (iterator) to a linked list of objects
+        public AdministratorVm() //4. Constructor without parameters
         {
             ClientsManagers = new LinkedList<ClientManagerVm>();
         }
-        public AdministratorVm(LinkedList<ClientManagerVm> clientsManagers) //4. конструктор з параметрами
+        public AdministratorVm(LinkedList<ClientManagerVm> clientsManagers) //4. Constructor with parameters
         {
             ClientsManagers = clientsManagers;
         }
-        static public void ShowRequestAtAdministrator(Label label_ClientName, Label label_ClientSurname, Label label_ClientPatronymic, Label label_ClientPhoneNumber, Label label_SleepingPlacesNumber, Label label_ApartmentСlass, Label label_StayTime, Label label_RequestState, Button button_ConfirmRequest, Button button_DeclineRequest) //12. статичний метод для перегляду списку
+        static public void ShowRequestAtAdministrator(Label label_ClientName, Label label_ClientSurname, Label label_ClientPatronymic, Label label_ClientPhoneNumber, Label label_SleepingPlacesNumber, Label label_ApartmentСlass, Label label_StayTime, Label label_RequestState, Button button_ConfirmRequest, Button button_DeclineRequest) //12. Static method for list view
         {
             label_ClientName.Text = AdministratorVm.Nodes.Value.Client.Name;
             label_ClientSurname.Text = AdministratorVm.Nodes.Value.Client.Surname;
